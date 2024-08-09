@@ -12,3 +12,5 @@
 <p></p>Чтобы создать админа нужно перейти по адресу _Домен_/admin/administrators/create, после того как создали админа, нужно закрыть доступ к данному адресу, нужно в resources/js/components/Admin/administrators/Create.vue вместо в методе submitAdmin() вместо axios поставить api. В api.php Route::post('/administrators', \App\Http\Controllers\Admin\Administrators\StoreController::class);
 перенести в Route::group(['middleware' => 'jwt.auth'], function () {});. Также в router.js path: '/admin/administrators/create' meta: { requiresAuth: false } - false поменять на true </p>
 <p>Также в папке cd /var/www/neogym/storage/app/public нужно создать папку images командой - sudo mkdir images</p>
+
+<p>Шаблон был взят с сайта Free Html Templates https://html.design/</p>
